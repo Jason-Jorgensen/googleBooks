@@ -9,6 +9,6 @@ const BookSchema = new Schema({
     "link":String,
 });
 
-const Books = mongoose.model("Books",BookSchema);
+const Book = mongoose.model("Book",BookSchema);
 
-module.exports = Books;
+module.exports = Book;
