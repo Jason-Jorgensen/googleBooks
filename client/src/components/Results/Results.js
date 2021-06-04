@@ -20,9 +20,6 @@ const useStyles = makeStyles((theme) => ({
   }));
 
 
-
-
-
 const defaultProps = {
     bgcolor: 'background.paper',
     borderColor: 'text.primary',
@@ -32,8 +29,14 @@ const defaultProps = {
 };
 
 
-function Results({ results }) {
+function Results({ results, saveBook }) {
     const classes = useStyles();
+    const saveButton = (results) => {
+        console.log(results)
+        saveBook(results)
+        
+    }
+
     return (
         <div className={classes.root}>
             {results.map((book) =>
@@ -47,7 +50,8 @@ function Results({ results }) {
                                 </div>
                             </Grid>
                             <Grid item xs={6}>
-                                <Link ><Button variant="contained" style={{float:"right", marginRight:"15px", marginTop:"15px"}}>Save</Button></Link>
+                                {}
+                                <Link ><Button variant="contained" style={{float:"right", marginRight:"15px", marginTop:"15px"}} onClick={() => saveButton(book.volumeInfo)}>Save</Button></Link>
                                 <Link to={{ pathname: book.volumeInfo.infoLink}} target="_blank"><Button variant="contained" style={{float:"right", marginRight:"15px", marginTop:"15px"}}>View</Button></Link>
                             </Grid>
                             <Grid item xs={3}>
