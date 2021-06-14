@@ -32,7 +32,7 @@ const defaultProps = {
 function Results({ results, saveBook }) {
     const classes = useStyles();
     const saveButton = (results) => {
-        console.log(results)
+        // console.log(results)
         saveBook(results)
         
     }

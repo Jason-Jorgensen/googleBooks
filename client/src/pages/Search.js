@@ -66,7 +66,7 @@ const defaultProps = {
             <form className={classes.root} noValidate autoComplete="off">
             <TextField id="outlined-basic" style={{width:"95%"}} label="Book Title" variant="outlined" value={bookSearch} onChange={(e) => setBookSearch(e.target.value)} />
             </form>
-            <Button variant="contained" style={{display:'flex', alignContent:'flex-end'}} onClick={() => googleSearch(bookSearch)}>Default</Button>
+            <Button variant="contained" style={{display:'flex', alignContent:'flex-end'}} onClick={() => googleSearch(bookSearch)}>Search</Button>
             </Typography>
           </Box>
 
